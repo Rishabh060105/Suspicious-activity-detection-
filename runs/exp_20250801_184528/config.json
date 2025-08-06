@@ -1,0 +1,22 @@
+{
+    "batch_size": 32,
+    "num_workers": 4,
+    "pin_memory": true,
+    "sequence_length": 30,
+    "hidden_size": 256,
+    "num_layers": 2,
+    "dropout": 0.3,
+    "use_attention": true,
+    "num_attention_heads": 4,
+    "num_epochs": 100,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "max_grad_norm": 1.0,
+    "patience": 15,
+    "features_dir": "data/pose_features_processed_20250801_1900",
+    "output_dir": "runs/exp_20250801_184528",
+    "checkpoint_dir": "runs/exp_20250801_184528/checkpoints",
+    "figures_dir": "runs/exp_20250801_184528/figures",
+    "input_size": 102,
+    "_device": "cpu"
+}

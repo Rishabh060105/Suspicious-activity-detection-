@@ -1,0 +1,113 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Data files
+*.npy
+*.npz
+*.pkl
+*.h5
+*.pth
+*.pt
+*.bin
+*.data
+*.index
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Local development
+.env
+.env.local
+
+# Large data directories
+data/
+features/
+features_engineered/
+results/
+validation_results/
+test_results/
+
+# Model files (except the final model)
+models/**
+!models/exp_20250801_184528/
+!models/exp_20250801_184528/**
+final_model/
+final_production_model/
+final_xgb_model/
+*.pth
+!models/exp_20250801_184528/checkpoints/best_model.pth
+*.pt
+*.bin
+
+# Test and temporary files
+test_*
+script_*.py
+*.mp4
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# Specific files to exclude
+hard_negatives.txt
+filepaths.txt
+project_files_summary.csv
+system_specifications.csv
+usage_workflow.csv
+feature_sparsity_analysis.csv
+feature_statistics.csv
+
+# Keep only the final model in runs/
+runs/exp_*/checkpoints/*.pt
+!runs/exp_20250801_184528/checkpoints/best_model.pt
+!runs/exp_20250801_184528/final_metrics.json
+!runs/exp_20250801_184528/config.json
+
+# Data directories
+data/videos/
+data/pose_features_processed/
+!data/pose_features_processed_20250801_1900/
+!data/pose_features_processed_20250801_1900/*
