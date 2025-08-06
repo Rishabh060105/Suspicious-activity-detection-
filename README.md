@@ -29,22 +29,7 @@ A robust, end-to-end pipeline for detecting suspicious human activities from vid
 
 ## 🛠 Installation
 
-### Prerequisites
-- Python 3.8+
-- CUDA 11.3+ (for GPU acceleration)
-- pip 20.0+
-
-### Setup
-
 ```bash
-# Clone the repository
-git clone https://github.com/yourusername/suspicious-activity-detection.git
-cd suspicious-activity-detection
-
-# Create and activate virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-
 # Install dependencies
 pip install -r requirements.txt
 
@@ -103,15 +88,11 @@ suspicious-activity-detection/
 │       └── config.yaml           # Experiment config
 │
 ├── tests/                         # Unit tests
-├── .gitignore
 ├── requirements.txt
 ├── README.md
-└── setup.py
 ```
 
 ## 🏗 System Architecture
-
-![System Architecture](docs/architecture.png)
 
 The system consists of three main components:
 
@@ -135,7 +116,7 @@ The system consists of three main components:
    - Focal Loss for imbalanced data
    - Learning rate scheduling
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### 1. Data Preparation
 
@@ -205,7 +186,7 @@ class SuspiciousActivityLSTM(nn.Module):
         return self.classifier(context)
 ```
 
-## 📊 Evaluation Metrics
+## Evaluation Metrics
 
 | Metric       | Value  |
 |--------------|--------|
@@ -216,7 +197,7 @@ class SuspiciousActivityLSTM(nn.Module):
 | ROC-AUC      | 0.94   |
 | PR-AUC       | 0.91   |
 
-## 🚀 Deployment
+##  Deployment
 
 ### Export to ONNX
 ```bash
@@ -237,31 +218,17 @@ input_name = sess.get_inputs()[0].name
 output = sess.run(None, {input_name: input_data})
 ```
 
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
 ## 📜 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - [Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics)
 - [SPHAR Dataset](https://github.com/AlexanderMelde/SPHAR-Dataset)
 - [PyTorch](https://pytorch.org/)
 
 ---
-
-<div align="center">
-  Made with ❤️ by Your Name
-</div>
 
 Bash
 python prepare_lstm_data.py --raw-dir "path/to/your/videos" --output-dir "data/pose_features_processed"
